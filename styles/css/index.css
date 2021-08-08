@@ -9428,6 +9428,7 @@ readers do not read off random characters that represent icons */
 .navBar .logo {
   font-size: 35px;
   font-weight: 600;
+  padding-left: 10px;
 }
 .navBar .logo a {
   color: #ffffff;
