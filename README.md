@@ -33,4 +33,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-P.S: Credit must be given where it is due. The website was inspired by Youtube tutorial - CodingNepal - https://www.youtube.com/watch?v=tcskp-ncN0I&t=317s ; however, all code are my own created in Next.js and SASS. 
+P.S: Credit must be given where it is due. The website was inspired by Youtube tutorial - CodingNepal - https://www.youtube.com/watch?v=tcskp-ncN0I&t=317s ; however, all code are my own created in Next.js
