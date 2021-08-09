@@ -17,7 +17,7 @@ class MyDocument extends Document {
 					<title>My Portfolio</title>
 					<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 					<meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
-					<link rel="shortcut icon" sizes="16x16 32x32 48x48" href={`${BASE_PATH}/favicon.ico`} type="image/x-icon"/>
+					<link rel="shortcut icon" sizes="16x16 32x32 48x48" href={`${BASE_PATH}/Leo.jpg`} type="image/x-icon"/>
 					<meta property="og:image" content={`${BASE_PATH}/assets/logoColour.png`}/>
 				</head>
 				<Head />

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
-$fa-font-path: "fontawesome-pro-5.13.0-web/webfonts";
-@import "fontawesome-pro-5.13.0-web/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/css/all.css";
 
 * {
   margin: 0;
@@ -10,7 +9,7 @@ $fa-font-path: "fontawesome-pro-5.13.0-web/webfonts";
 }
 
 .container {
-  width: 1300px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -20,8 +19,24 @@ $fa-font-path: "fontawesome-pro-5.13.0-web/webfonts";
   position: fixed;
   width: 100%;
   font-family: "Ubuntu", sans-serif;
-  //background: crimson;
   padding: 30px 0;
+  transition: all 300ms ease;
+
+  &.sticky {
+    background-color: crimson;
+    padding: 15px 0;
+
+    &.sticky span {
+      color: #ffffff;
+      transition: color 300ms ease;
+    }
+
+    &.sticky a {
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
 
   .container {
     display: flex;
@@ -49,7 +64,7 @@ $fa-font-path: "fontawesome-pro-5.13.0-web/webfonts";
     a {
       color: #ffffff;
       font-size: 18px;
-      font-weight: 500;
+      font-weight: 600;
       padding: 0 20px;
       transition: color 300ms ease;
 
@@ -57,6 +72,13 @@ $fa-font-path: "fontawesome-pro-5.13.0-web/webfonts";
         color: crimson;
       }
     }
+  }
+
+  .menuButton {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
   }
 }
 
@@ -99,6 +121,57 @@ $fa-font-path: "fontawesome-pro-5.13.0-web/webfonts";
         color: crimson;
         font-weight: 500;
       }
+    }
+  }
+}
+
+//responsive media query start
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 947px) {
+  .container {
+    width: 100%;
+
+    .menu {
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 5%, #111111,  rgba(0, 0, 0, 0.9));
+      padding-top: 50px;
+      position: fixed;
+      left: -100%;
+      top: 0;
+
+      li {
+        display: block;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        margin: 5%;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 0;
+      }
+
+      &.active {
+        left: 0;
+      }
+    }
+
+    .menuButton {
+      display: block;
+      z-index: 9999;
+      position: relative;
+      right: 50px;
     }
   }
 }
