@@ -214,7 +214,7 @@
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 5%, #111111, rgba(0, 0, 0, 0.9));
     padding-top: 50px;
     position: fixed;
-    left: -100%;
+    left: 0;
     top: 0;
   }
   .container .menu a {
@@ -224,9 +224,6 @@
     font-size: 20px;
     font-weight: 400;
     padding: 0;
-  }
-  .container .menu.active {
-    left: 0;
   }
   .container .menuButton {
     display: block;

@@ -20,8 +20,24 @@ export default function Home () {
 	}, []);
 
 	//toggle menu/navbar state
+	const [toggleMenu, setToggleMenu] = useState(false);
+	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
+	const toggleNav = () => {
+		setToggleMenu(!toggleMenu);
+	};
 
+	useEffect(() => {
+		const changeWidth = () => {
+			setScreenWidth(window.innerWidth);
+		};
+
+		window.addEventListener("resize", changeWidth);
+
+		return () => {
+			window.removeEventListener("resize", changeWidth);
+		};
+	}, []);
 
 	return (
 		<Screen>
@@ -30,17 +46,20 @@ export default function Home () {
 				<Column className="container">
 					<Row className="logo"><Link href="#"><a>Portfo<span>lio.</span></a></Link></Row>
 
-					<Row className="menu">
-						<Link href="#home"><a>Home</a></Link>
-						<Link href="#about"><a>About</a></Link>
-						<Link href="#services"><a>Services</a></Link>
-						<Link href="#skills"><a>Skills</a></Link>
-						<Link href="#teams"><a>Teams</a></Link>
-						<Link href="#contact"><a>Contact</a></Link>
-					</Row>
+					{(toggleMenu || screenWidth > 947) && (
+						<Row className="menu">
+							<Link href="#home"><a>Home</a></Link>
+							<Link href="#about"><a>About</a></Link>
+							<Link href="#services"><a>Services</a></Link>
+							<Link href="#skills"><a>Skills</a></Link>
+							<Link href="#teams"><a>Teams</a></Link>
+							<Link href="#contact"><a>Contact</a></Link>
+						</Row>
+					)}
+
 
 					<Row className="menuButton">
-						<i className="fas fa-bars"/>
+						<i onClick={toggleNav} className="fas fa-bars"/>
 					</Row>
 				</Column>
 			</nav>
