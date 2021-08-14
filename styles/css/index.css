@@ -7,6 +7,11 @@
   text-decoration: none;
 }
 
+html {
+  width: 100%;
+  height: 100vh;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -23,6 +28,7 @@
 .navBar.sticky {
   background-color: crimson;
   padding: 15px 0;
+  cursor: pointer;
 }
 .navBar.sticky.sticky span {
   color: #ffffff;
@@ -56,6 +62,7 @@
   font-weight: 600;
   padding: 0 20px;
   transition: color 300ms ease;
+  cursor: pointer;
 }
 .navBar .menu a:hover {
   color: crimson;
@@ -67,6 +74,62 @@
   display: none;
 }
 
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 994px) {
+  .navBar .container {
+    width: 90%;
+  }
+  .navBar .container .menu {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: black;
+    padding-top: 50px;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  .navBar .container .menu a {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 0;
+    transition: color 300ms ease;
+  }
+  .navBar .container .menu a:hover {
+    color: crimson;
+  }
+  .navBar .container .menuButton {
+    display: block;
+    position: relative;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navBar {
+    padding: 20px 0;
+  }
+  .navBar .container .logo {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .navBar {
+    padding: 20px 0;
+  }
+  .navBar .container .logo {
+    font-size: 20px;
+  }
+  .navBar .container .menu a {
+    font-size: 20px;
+    margin: 10%;
+  }
+}
 .home {
   font-family: "Ubuntu", sans-serif;
   width: 100%;
@@ -86,16 +149,19 @@
 .home .container .homeContent h3 {
   font-size: 27px;
   font-weight: 400;
+  padding: 20px 0;
 }
 .home .container .homeContent h1 {
   font-size: 75px;
   font-weight: 600;
   margin-left: -3px;
+  padding-bottom: 20px;
 }
 .home .container .homeContent h2 {
   font-size: 40px;
   font-weight: 400;
   margin: 5px 0;
+  padding-bottom: 20px;
 }
 .home .container .homeContent span {
   color: crimson;
@@ -117,12 +183,58 @@
   color: crimson;
 }
 
+@media screen and (max-width: 1200px) {
+  .home .container .homeContent h3 {
+    font-size: 24px;
+  }
+  .home .container .homeContent h1 {
+    font-size: 65px;
+  }
+  .home .container .homeContent h2 {
+    font-size: 35px;
+  }
+  .home .container .homeContent a {
+    font-size: 22px;
+    padding: 10px 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home .container .homeContent h3 {
+    font-size: 22px;
+  }
+  .home .container .homeContent h1 {
+    font-size: 50px;
+  }
+  .home .container .homeContent h2 {
+    font-size: 32px;
+  }
+  .home .container .homeContent a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .home .container .homeContent h3 {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+  .home .container .homeContent h1 {
+    font-size: 40px;
+    padding-bottom: 10px;
+  }
+  .home .container .homeContent h2 {
+    font-size: 24px;
+  }
+  .home .container .homeContent a {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
 .about {
   width: 100%;
   font-family: "Poppins", sans-serif;
   padding: 100px 0;
 }
-.about .container h2 {
+.about h2 {
   font-family: "Ubuntu", sans-serif;
   text-align: center;
   font-size: 40px;
@@ -131,7 +243,7 @@
   padding-bottom: 20px;
   position: relative;
 }
-.about .container h2:before {
+.about h2:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -141,7 +253,7 @@
   background: #111111;
   transform: translateX(-50%);
 }
-.about .container h2:after {
+.about h2:after {
   content: "who I am";
   position: absolute;
   bottom: -12px;
@@ -157,10 +269,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.about .container .aboutContent .imgColumn {
-  flex: 1;
-}
-.about .container .aboutContent .imgColumn img {
+.about .container .aboutContent img {
   width: 400px;
   height: 400px;
   object-fit: cover;
@@ -168,16 +277,18 @@
 }
 .about .container .aboutContent .detailColumn {
   flex: 2;
+  padding: 0 20px;
 }
 .about .container .aboutContent .detailColumn .text {
   font-size: 25px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .about .container .aboutContent .detailColumn .text span {
   color: crimson;
 }
 .about .container .aboutContent .detailColumn p {
+  margin: 20px 0;
   text-align: justify;
 }
 .about .container .aboutContent .detailColumn a {
@@ -196,40 +307,79 @@
   color: crimson;
 }
 
-@media (max-width: 1024px) {
-  .container {
+@media screen and (max-width: 1200px) {
+  .about .container {
     width: 90%;
-    display: flex;
-    justify-content: space-between;
+  }
+  .about .container .aboutContent img {
+    width: 350px;
+    height: 350px;
   }
 }
-@media (max-width: 947px) {
-  .container {
-    width: 100%;
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 20px 0;
   }
-  .container .menu {
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 5%, #111111, rgba(0, 0, 0, 0.9));
-    padding-top: 50px;
-    position: fixed;
-    left: 0;
-    top: 0;
+  .about h2 {
+    font-size: 30px;
+    margin: 20px;
   }
-  .container .menu a {
-    display: flex;
+  .about .container .aboutContent {
+    width: 100%;
     justify-content: center;
-    margin: 5%;
-    font-size: 20px;
-    font-weight: 400;
-    padding: 0;
   }
-  .container .menuButton {
-    display: block;
-    z-index: 9999;
-    position: relative;
-    right: 50px;
+  .about .container .aboutContent img {
+    width: inherit;
+    height: 600px;
+    padding: 20px;
+  }
+  .about .container .aboutContent .detailColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about .container .aboutContent .detailColumn .text {
+    margin: 20px 0;
+  }
+  .about .container .aboutContent .detailColumn p {
+    font-size: 16px;
+  }
+  .about .container .aboutContent .detailColumn a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .about {
+    padding: 10px 0;
+  }
+  .about h2 {
+    font-size: 30px;
+  }
+  .about .container .aboutContent {
+    width: 100%;
+    justify-content: center;
+  }
+  .about .container .aboutContent img {
+    width: inherit;
+    height: 300px;
+    object-position: top 50%;
+  }
+  .about .container .aboutContent .detailColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about .container .aboutContent .detailColumn .text {
+    font-size: 22px;
+    text-align: center;
+  }
+  .about .container .aboutContent .detailColumn p {
+    font-size: 14px;
+  }
+  .about .container .aboutContent .detailColumn a {
+    font-size: 12px;
   }
 }
 
