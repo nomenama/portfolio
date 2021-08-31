@@ -4,7 +4,9 @@ import Column from "../components/Column";
 import {motion} from "framer-motion";
 import Link from "next/link";
 
-const Header = (props) => {
+const Header = () => {
+
+
 	const [scrollState, setScrollState] = useState(0);
 	const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -27,35 +29,57 @@ const Header = (props) => {
 	const hamburgerIcon = <i onClick={toggleNav} className="fas fa-bars"/>;
 	const closeIcon = <i onClick={toggleNav} className="fas fa-times"/>;
 
-	const closeMobileMenu = () => setToggleMenu(false);
-
 	const animateFrom = {opacity: 0, y: -40};
 	const animateTo = {opacity: 1, y: 0};
+
+	const closeMobileMenu = () => setToggleMenu(false);
 
 	return (
 		<nav className={`navBar ${scrollState > 0 ? "sticky" : ""}`}>
 			<Column className="container">
-				<Row className="logo"><Link href="#"><a>Portfo<span>lio.</span></a></Link></Row>
+				<Row className="logo"><Link href={"#home"}><a>Portfo<span>lio.</span></a></Link></Row>
+
+				<Row className="desktopMenu">
+					<Link href="/">
+						<a>Home</a>
+					</Link>
+					<Link href={"#about"}>
+						<a>About</a>
+					</Link>
+					<Link href={"#services"}>
+						<a>Services</a>
+					</Link>
+					<Link href={"#skills"}>
+						<a>Skills</a>
+					</Link>
+					<Link href={"#teams"}>
+						<a>Teams</a>
+					</Link>
+					<Link href={"#contact"}>
+						<a>Contact</a>
+					</Link>
+				</Row>
 
 				{toggleMenu && (
-					<Row className="menu" isMobile={true} closeMobileMenu={closeMobileMenu}>
-						<Link href="#home">
-							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.05}} onClick={() => props.isMobile && props.closeMobileMenu()}>Home</motion.a>
+					<Row className="mobileMenu">
+
+						<Link href={"#home"}>
+							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.05}} onClick={closeMobileMenu}>Home</motion.a>
 						</Link>
-						<Link href="#about">
-							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.10}} onClick={() => props.isMobile && props.closeMobileMenu()}>About</motion.a>
+						<Link href={"#about"}>
+							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.10}} onClick={closeMobileMenu}>About</motion.a>
 						</Link>
-						<Link href="#services">
-							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.20}} onClick={() => props.isMobile && props.closeMobileMenu()}>Services</motion.a>
+						<Link href={"#services"}>
+							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.20}} onClick={closeMobileMenu}>Services</motion.a>
 						</Link>
-						<Link href="#skills">
-							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.30}} onClick={() => props.isMobile && props.closeMobileMenu()}>Skills</motion.a>
+						<Link href={"#skills"}>
+							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.30}} onClick={closeMobileMenu}>Skills</motion.a>
 						</Link>
-						<Link href="#teams">
-							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.40}} onClick={() => props.isMobile && props.closeMobileMenu()}>Teams</motion.a>
+						<Link href={"#teams"}>
+							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.40}} onClick={closeMobileMenu}>Teams</motion.a>
 						</Link>
-						<Link href="#contact">
-							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.50}} onClick={() => props.isMobile && props.closeMobileMenu()}>Contact</motion.a>
+						<Link href={"#contact"}>
+							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.50}} onClick={closeMobileMenu}>Contact</motion.a>
 						</Link>
 					</Row>
 				)}

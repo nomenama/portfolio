@@ -7,7 +7,7 @@ const About = () => {
 	return (
 		<section className="about" id="about">
 
-			<h2>About me</h2>
+			<h2>About Me</h2>
 
 			<Column className="container">
 
