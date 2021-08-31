@@ -1,0 +1,87 @@
+.services {
+  width: 100%;
+  background-color: #111111;
+  font-family: "Poppins", sans-serif;
+  padding: 100px 0;
+
+  h2 {
+    font-family: "Ubuntu", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 180px;
+      height: 3px;
+      background: #ffffff;
+      transform: translateX(-50%);
+    }
+
+    &:after {
+      content: "what I provide";
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      font-size: 20px;
+      color: crimson;
+      padding: 5px;
+      background: #111111;
+      transform: translateX(-50%);
+    }
+  }
+
+  .container {
+
+    .cardContent {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .card {
+        width: calc(30% - 20px);
+        background-color: #222222;
+        color: #ffffff;
+        padding: 50px 20px;
+        text-align: center;
+
+        i {
+          font-size: 50px;
+          color: crimson;
+        }
+
+        .text {
+          font-size: 25px;
+          margin: 10px 0;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .services {
+
+    .container {
+
+      .cardContent {
+
+        .card {
+          width: 100%;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+}

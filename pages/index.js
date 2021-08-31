@@ -4,6 +4,7 @@ import Column from "../components/Column";
 import Row from "../components/Row";
 import MainBanner from "../components/MainBanner";
 import About from "../components/About";
+import Services from "../components/Services";
 
 export default function Home (props) {
 
@@ -13,6 +14,7 @@ export default function Home (props) {
 			<Header/>
 			<MainBanner/>
 			<About />
+			<Services />
 
 		</Screen>
 	);
