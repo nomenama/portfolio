@@ -172,7 +172,7 @@ html {
   margin: 5px 0;
   padding-bottom: 20px;
 }
-.home .container .homeContent span {
+.home .container .homeContent h2 span {
   color: crimson;
   font-weight: 500;
 }
@@ -223,15 +223,15 @@ html {
 }
 @media screen and (max-width: 414px) {
   .home .container .homeContent h3 {
-    font-size: 18px;
+    font-size: 16px;
     padding: 10px 0;
   }
   .home .container .homeContent h1 {
-    font-size: 40px;
+    font-size: 32px;
     padding-bottom: 10px;
   }
   .home .container .homeContent h2 {
-    font-size: 24px;
+    font-size: 18px;
   }
   .home .container .homeContent a {
     font-size: 16px;
