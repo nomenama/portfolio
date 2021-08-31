@@ -40,7 +40,7 @@ const Header = () => {
 				<Row className="logo"><Link href={"#home"}><a>Portfo<span>lio.</span></a></Link></Row>
 
 				<Row className="desktopMenu">
-					<Link href="/">
+					<Link href={"#home"}>
 						<a>Home</a>
 					</Link>
 					<Link href={"#about"}>
