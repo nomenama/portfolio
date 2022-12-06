@@ -1,8 +1,8 @@
 import React from "react";
-import Column from "./Column";
-import Row from "./Row";
+import Column from "../Column";
+import Row from "../Row";
 
-const Services = () => {
+const Projects = () => {
 
 	return (
 		<section className="services" id="services">
@@ -13,7 +13,7 @@ const Services = () => {
 				<Row className="cardContent">
 
 					<Column className="card">
-						<i className="fas fa-paint-brush"></i>
+						<i className="fas fa-paint-brush" />
 						<div className="text">Web Design</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque fugiat mollitia rem rerum sunt? Adipisci animi autem deleniti iusto sunt!</p>
 					</Column>
@@ -35,4 +35,4 @@ const Services = () => {
 		</section>
 	);
 };
-export default Services;
+export default Projects;

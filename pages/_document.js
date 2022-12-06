@@ -14,7 +14,7 @@ class MyDocument extends Document {
 			<Html lang="en">
 				<head>
 					<meta charSet="utf-8"/>
-					<title>My Portfolio</title>
+					<title>Nomen Ama</title>
 					<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 					<meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
 					<link rel="shortcut icon" sizes="16x16 32x32 48x48" href={`${BASE_PATH}/Leo.jpg`} type="image/x-icon"/>

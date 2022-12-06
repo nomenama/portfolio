@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-import Row from "../components/Row";
-import Column from "../components/Column";
+import Row from "../Row";
+import Column from "../Column";
 import {motion} from "framer-motion";
 import Link from "next/link";
 
@@ -46,18 +46,16 @@ const Header = () => {
 					<Link href={"#about"}>
 						<a>About</a>
 					</Link>
-					<Link href={"#services"}>
-						<a>Services</a>
+					<Link href={"#projects"}>
+						<a>Projects</a>
 					</Link>
 					<Link href={"#skills"}>
 						<a>Skills</a>
 					</Link>
-					<Link href={"#teams"}>
-						<a>Teams</a>
-					</Link>
-					<Link href={"#contact"}>
+
+{/*					<Link href={"#contact"}>
 						<a>Contact</a>
-					</Link>
+					</Link>*/}
 				</Row>
 
 				{toggleMenu && (
@@ -69,18 +67,15 @@ const Header = () => {
 						<Link href={"#about"}>
 							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.10}} onClick={closeMobileMenu}>About</motion.a>
 						</Link>
-						<Link href={"#services"}>
-							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.20}} onClick={closeMobileMenu}>Services</motion.a>
+						<Link href={"#projects"}>
+							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.20}} onClick={closeMobileMenu}>Projects</motion.a>
 						</Link>
 						<Link href={"#skills"}>
 							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.30}} onClick={closeMobileMenu}>Skills</motion.a>
 						</Link>
-						<Link href={"#teams"}>
-							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.40}} onClick={closeMobileMenu}>Teams</motion.a>
-						</Link>
-						<Link href={"#contact"}>
+{/*						<Link href={"#contact"}>
 							<motion.a initial={animateFrom} animate={animateTo} transition={{delay: 0.50}} onClick={closeMobileMenu}>Contact</motion.a>
-						</Link>
+						</Link>*/}
 					</Row>
 				)}
 

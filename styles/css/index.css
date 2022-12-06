@@ -300,6 +300,9 @@ html {
   margin: 20px 0;
   text-align: justify;
 }
+.about .container .aboutContent .detailColumn i {
+  font-weight: 600;
+}
 .about .container .aboutContent .detailColumn a {
   display: inline-block;
   background: crimson;
@@ -316,7 +319,7 @@ html {
   color: crimson;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .about .container {
     width: 90%;
   }
@@ -350,6 +353,7 @@ html {
   }
   .about .container .aboutContent .detailColumn .text {
     margin: 20px 0;
+    font-size: 18px;
   }
   .about .container .aboutContent .detailColumn p {
     font-size: 16px;
