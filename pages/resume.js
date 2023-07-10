@@ -81,12 +81,12 @@ export default function Home() {
 
                                     <p>
                                         I love the core aspect of software engineering which is problem solving and there&apos;s always something new to tackle.
-                                        Whether it's creating a stunning UI or writing a functioning API.
+                                        Whether it&apos;s creating a stunning UI or writing a functioning API.
                                         (Sound generic, but I have no other way to put it.)
                                     </p>
 
                                     <p>
-                                        When I'm not working, you might catch me cruising through the picturesque Yorkshire countryside on my motorcycle or camping amidst the breathtaking landscapes of the Scottish Highlands.
+                                        When I&apos;m not working, you might catch me cruising through the picturesque Yorkshire countryside on my motorcycle or camping amidst the breathtaking landscapes of the Scottish Highlands.
                                     </p>
                                 </div>
                                 <div className="credential-edc-exp credential-experience">
@@ -174,7 +174,7 @@ export default function Home() {
                                     <p style={{display: "flex", "flexDirection": "row", gap: "10px", marginTop: "10px"}}>
                                         <span>&#x2022;</span>
                                         <span>
-                                            I'm a self-motivated individual who excels both in collaborative team environments and when working independently.
+                                            I&apos;m a self-motivated individual who excels both in collaborative team environments and when working independently.
                                         </span>
                                     </p>
                                 </div>
