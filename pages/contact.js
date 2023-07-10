@@ -10,6 +10,7 @@ const initialState = {
 
 export default function Home() {
     const [formData, setFormData] = useState(initialState);
+    const [isLoading, setIsLoading] = useState(false);
     const [response, setResponse] = useState({type: "", message: ""});
 
     const onChange = (event) => {
@@ -23,6 +24,7 @@ export default function Home() {
 
     const onSubmit = async (event) => {
         event.preventDefault();
+        setIsLoading(true);
 
         const res = await fetch("/api/contact", {
             method: "POST",
@@ -34,6 +36,7 @@ export default function Home() {
         })
 
         if (res.ok) {
+            setIsLoading(false);
             setFormData(initialState);
 
             setResponse({
@@ -41,6 +44,7 @@ export default function Home() {
                 message: "Your message was sent successfully."
             })
         } else {
+            setIsLoading(false);
             setResponse({
                 type: "error",
                 message: "An error occurred. Please try again."
@@ -115,7 +119,7 @@ export default function Home() {
                                             <textarea onChange={onChange} value={formData.message} name="message" id="message" placeholder="Your Message *" required/>
                                         </div>
                                         <div className="input-group">
-                                            <button disabled={!formData.name || !formData.email || !formData.subject || !formData.message} className="theme-btn submit-btn" name="submit" type="submit">Send Message</button>
+                                            <button disabled={!formData.name || !formData.email || !formData.subject || !formData.message} className="theme-btn submit-btn" name="submit" type="submit">{isLoading ? "Sending..." : "Send Message"}</button>
                                         </div>
                                     </form>
                                 </div>
