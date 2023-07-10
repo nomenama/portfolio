@@ -6,7 +6,8 @@ import { useEffect, useState } from "react"
 import "../public/assets/css/bootstrap.min.css"
 import "../public/assets/css/iconoir.css"
 // import "../public/assets/css/style-light.css"
-import "../public/assets/css/style.css"
+import "../public/assets/css/style.css";
+import"../public/assets/css/card.css";
 
 function MyApp({ Component, pageProps }) {
 
