@@ -48,8 +48,8 @@ export default function Home() {
                                     <h3 className="spacing-3">EXPERIENCE</h3>
                                     <ul>
                                         <li>
-                                            <p className="date">March 2023 - Current</p>
-                                            <h2>Founder & Software Engineer</h2>
+                                            <p className="date">Feb 2023 - Current</p>
+                                            <h2>Software Engineer & Co-Founder</h2>
                                             <p className="type">Intraverse Software Enterprise (Malaysia)</p>
                                         </li>
                                         <li>

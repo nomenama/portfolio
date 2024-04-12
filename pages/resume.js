@@ -92,8 +92,8 @@ export default function Home() {
                                 <div className="credential-edc-exp credential-experience">
                                     <h2 data-aos="fade-up" className="spacing-3">Experience</h2>
                                     <div className="credential-edc-exp-item" data-aos="zoom-in">
-                                        <h4>March 2023 - Current</h4>
-                                        <h3>Founder & Software Engineer</h3>
+                                        <h4>Feb 2023 - Current</h4>
+                                        <h3>Software Engineer & Co-Founder</h3>
                                         <h5>Intraverse Software Enterprise (Malaysia)</h5>
 
                                         <p style={{display: "flex", "flexDirection": "row", gap: "10px", marginTop: "10px"}}>
