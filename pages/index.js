@@ -22,7 +22,7 @@ export default function Home() {
                                 <div className="about-details-inner shadow-box">
                                     <img src="/assets/images/icon2.png" alt="Star" />
                                     <h1>Nomen Ama</h1>
-                                    <p>I am a full stack software engineer based in York, UK. Skilled in web development, particularly in the MERN stack (MongoDB, Express.js, React.js, Node.js).</p>
+                                    <p>Reliable Software Developer with three years of hands-on experience, mainly focusing on web development. I thrive in start-up environments, leveraging my self-starter capability to initiate and drive projects from inception to completion. Passionate about programming and software engineering, I'm dedicated to crafting robust, scalable web applications that push boundaries and tackle real-world challenges.</p>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ export default function Home() {
                                         </li>
                                         <li>
                                             <p className="date">June 2021 - Nov 2022</p>
-                                            <h2>Software Engineer</h2>
+                                            <h2>Software Developer</h2>
                                             <p className="type">Irrelon Software Limited (UK)</p>
                                         </li>
                                     </ul>
